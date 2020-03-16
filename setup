@@ -1,0 +1,11 @@
+#! /bin/bash
+
+PKG_MGR=pacman
+PKG_MGR_INSTALL=-S
+
+# Packages from the package manager
+sudo $PKG_MGR $PKG_MGR_INSTALL xclip
+sudo $PKG_MGR $PKG_MGR_INSTALL ranger
+
+# Packages from pip
+pip install -r requirements.txt
