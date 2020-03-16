@@ -1,0 +1,7 @@
+#! /bin/bash
+
+export MDC_THEME=757.2295
+
+CUSTOM_SCRIPT_DIR=~/scripts
+
+source $CUSTOM_SCRIPT_DIR/shell/aliases
