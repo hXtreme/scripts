@@ -1,44 +1,47 @@
 #!/bin/bash
-# A file for storing handy aliases
-#
+## A file for storing handy aliases.
 
 DIR=~/scripts/shell
 
-# Help
-alias alias-help="cat $DIR/aliases"
+# ---
+## Help
+# Print this message.
+# Usage: `$ alias-help`
+alias alias-help="cat $DIR/aliases | grep '^#' | awk '{print substr(\$0, 2, length(\$0))}' | mdv -t $MDC_THEME -"
 
-# Commands
+# ---
+## Commands
 
-## --- please ---
-#### Run the last command with sudo
-#### Usage: $ please
+### --- please ---
+# Run the last command with sudo.
+# Usage: `$ please`
 alias please='sudo $(history -p \!\!)'
 
-## --- clipboard ---
-#### Pipe output to clipboard
-#### Usage: $ echo "Hello, World!" | clipboard
+### --- clipboard ---
+# Pipe output to clipboard.
+# Usage: `$ echo "Hello, World!" | clipboard`
 alias clipboard='xclip -sel clip'
 
-## --- venv-activate ---
-#### Activate the python venv in the current directory.
-#### Usage: $ venv-activate
+### --- venv-activate ---
+# Activate the python venv in the current directory.
+# Usage: `$ venv-activate`
 alias venv-activate='source venv/bin/activate'
 
+# ---
+## Apps
 
-# Apps
-
-## --- files ---
-#### Run a commandline file manager
-#### Usage: $ files
-#### See `man files` for complete documentation.
+### --- files ---
+# Run a commandline file manager.
+# Usage: `$ files`
+# See `man files` for complete documentation.
 alias files='ranger'
 
+# ---
+## Permissions
 
-# Permissions
-
-## --- execution permission ---
-#### Grant or take execution permission to any file
-#### Usage: $ exec-enable file
-#### Usage: $ exec-disable file
+### --- execution permission ---
+# Grant/take execution permission to/from a file.
+# Usage: `$ exec-enable file`
+# Usage: `$ exec-disable file`
 alias exec-enable='chmod +x'
 alias exec-disable='chmod -x'
