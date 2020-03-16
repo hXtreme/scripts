@@ -7,7 +7,7 @@ DIR=~/scripts/shell
 ## Help
 # Print this message.
 # Usage: `$ alias-help`
-alias alias-help="cat $DIR/aliases | grep '^#' | awk '{print substr(\$0, 2, length(\$0))}' | mdv -t $MDC_THEME -"
+alias alias-help="cat $DIR/aliases | grep '^#' | awk '{print substr(\$0, 2, length(\$0))}' | mdr -"
 
 # ---
 ## Commands
@@ -35,6 +35,12 @@ alias venv-activate='source venv/bin/activate'
 # Usage: `$ files`
 # See `man files` for complete documentation.
 alias files='ranger'
+
+### --- mdr ---
+# Run a terminal based markdown renderer with custom theme.
+# Usage: `$ mdr`
+# See `mdv -h` for complete documentation.
+alias mdr='mdv -t $MDV_THEME'
 
 # ---
 ## Permissions
