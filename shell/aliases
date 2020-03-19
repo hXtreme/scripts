@@ -7,7 +7,7 @@ DIR=~/scripts/shell
 ## Help
 # Print this message.
 # Usage: `$ alias-help`
-alias alias-help="cat $DIR/aliases | grep '^#' | awk '{print substr(\$0, 2, length(\$0))}' | mdr -"
+alias alias-help="awk '/^#/{print substr(\$0, 2, length(\$0))}' $DIR/aliases | mdr -"
 
 # ---
 ## Commands
