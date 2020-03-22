@@ -13,9 +13,14 @@ alias alias-help="awk '/^#/{print substr(\$0, 2, length(\$0))}' $DIR/aliases | m
 ## Commands
 
 ### --- please ---
+# Run command with sudo.
+# Usage: `$ please <command>`
+alias please='sudo'
+
+### --- pretty-please ---
 # Run the last command with sudo.
-# Usage: `$ please`
-alias please='sudo $(history -p \!\!)'
+# Usage: `$ pretty-please`
+alias pretty-please='please $(history -p \!\!)'
 
 ### --- clipboard ---
 # Pipe output to clipboard.
