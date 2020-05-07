@@ -1,0 +1,8 @@
+#!/bin/bash
+## md_render
+# Render a markdown file
+# Usege: `md_render [file]`
+
+function md_render() {
+    mdv -t "${MDV_THEME:-757.2295}" "${1:-"-"}"
+}
