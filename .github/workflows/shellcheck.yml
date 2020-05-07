@@ -2,6 +2,7 @@ name: Shellcheck
 
 on: 
   pull_request:
+  push:
     branches:
       - master
 
