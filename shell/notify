@@ -1,0 +1,6 @@
+#!/bin/bash
+## Send desktop notifications from cron jobs
+
+eval "export $(grep -E -z DBUS_SESSION_BUS_ADDRESS /proc/"$(pgrep -u "$LOGNAME" plasmashell)"/environ)";
+
+notify-send "$@"
