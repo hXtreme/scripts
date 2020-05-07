@@ -2,7 +2,13 @@
 
 export MDV_THEME=757.2295
 
-CUSTOM_SCRIPT_DIR=~/scripts
+CUSTOM_SHELL_SCRIPT_DIR=~/scripts/shell
 
+## Source files
+
+# shellcheck source=./shell/md_render
+source $CUSTOM_SHELL_SCRIPT_DIR/md_render
+# shellcheck source=./shell/comment_docs
+source $CUSTOM_SHELL_SCRIPT_DIR/comment_docs
 # shellcheck source=./shell/aliases
-source $CUSTOM_SCRIPT_DIR/shell/aliases
+source $CUSTOM_SHELL_SCRIPT_DIR/aliases
