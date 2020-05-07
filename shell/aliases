@@ -1,13 +1,11 @@
 #!/bin/bash
 ## A file for storing handy aliases.
 
-DIR=~/scripts/shell
-
 # ---
 ## Help
 # Print this message.
 # Usage: `$ alias-help`
-alias alias-help="awk '/^#/{print substr(\$0, 2, length(\$0))}' $DIR/aliases | mdr -"
+alias alias-help="comment_docs ~/scripts/shell/aliases"
 
 # ---
 ## Commands
@@ -43,9 +41,9 @@ alias files='ranger'
 
 ### --- mdr ---
 # Run a terminal based markdown renderer with custom theme.
-# Usage: `$ mdr`
+# Usage: `$ mdr [file]`
 # See `mdv -h` for complete documentation.
-alias mdr='mdv -t $MDV_THEME'
+alias mdr='md_render'
 
 # ---
 ## Permissions

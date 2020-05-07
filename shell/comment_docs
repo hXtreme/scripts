@@ -1,0 +1,9 @@
+#!/bin/bash
+## comment_docs 
+# Render all (#) comments of a file as markdown
+# Usege: `comment_docs file`
+
+function comment_docs() {
+    docs=$(awk '/^#/{print substr($0, 2, length($0))}' "$1")
+    echo "$docs" | md_render
+}
