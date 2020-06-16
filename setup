@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 PKG_MGR=pacman
 PKG_MGR_INSTALL=-S
